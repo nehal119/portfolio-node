@@ -19,7 +19,7 @@
   <link href="/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link href="/css/stylish-portfolio.css" rel="stylesheet">
+  <link href="/css/stylish-portfolio.min.css" rel="stylesheet">
   <link href="/scss/stylish-portfolio.css" rel="stylesheet">
 
 </head>
@@ -72,8 +72,8 @@
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <h2>Hi there!</h2>
-          <h3 class="lead mb-5">I am Nehal Ahmad, a graduate with honors in mathematics. I’m a full stack web developer.</h3>
-          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+          <h3 class="lead mb-5 mt-4"><strong><i>I am Nehal Ahmad, a graduate with honors in mathematics. I’m a full stack web developer. I describe my self as someone who's persistant, a quick learner and loves problem solving by using simple and scalable solutions. I love mobile friendly websites and enjoy working on larger applications.</i></strong></h3>
+          <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What I Offer</a>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@
     <div class="container">
       <div class="content-section-heading">
         <h3 class="text-secondary mb-0">Services</h3>
-        <h2 class="mb-5">What I'm doing</h2>
+        <h2 class="mb-5">What I offer</h2>
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
@@ -133,10 +133,10 @@
   <!-- Callout -->
   <section class="callout">
     <div class="container text-center">
-      <h2 class="mx-auto mb-5">Welcome to
+      <h2 class="mx-auto mb-5">Imagine
         <em>your</em>
         next website!</h2>
-      <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>
+      <a class="btn btn-primary btn-xl" href="#contact">Contact Me</a>
     </div>
   </section>
 
@@ -160,33 +160,33 @@
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="https://github.com/nehal119/blog-app">
             <span class="caption">
               <span class="caption-content">
-                <h2>Ice Cream</h2>
-                <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                <h2>Blog App</h2>
+                <p class="mb-0">To share your memories, to stay in touch!</p>
               </span>
             </span>
             <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="https://github.com/nehal119/react-movie-app">
             <span class="caption">
               <span class="caption-content">
-                <h2>Strawberries</h2>
-                <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                <h2>Movie Finder</h2>
+                <p class="mb-0">We find the movies you love to watch!</p>
               </span>
             </span>
             <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
           </a>
         </div>
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="https://github.com/nehal119/shopping-cart-react">
             <span class="caption">
               <span class="caption-content">
-                <h2>Workspace</h2>
-                <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                <h2>Shopping Store</h2>
+                <p class="mb-0">Don't forget to checkout ;)</p>
               </span>
             </span>
             <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
@@ -197,56 +197,39 @@
   </section>
 
   <!-- Call to Action -->
-  <section class="content-section bg-primary text-white">
+  <!-- <section class="content-section bg-primary text-white">
     <div class="container text-center">
       <h2 class="mb-4">The buttons below are impossible to resist...</h2>
       <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
       <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
     </div>
-  </section>
+  </section> -->
 
 
-  <!-- Contact Me -->
+<!-- Contact Me -->
 <section id="contact">
-  <!--Section heading-->
-  <h2 class="h1-responsive font-weight-bold text-center my-4">Contact Me</h2>
-  <!--Section description-->
-  <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact.</p>
-
-  <div class="row">
-      <div class="col-lg-12 mb-5">
-          <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-              <div class="row">
-                  <div class="col-md-6">
-                      <div class="md-form mb-4">
-                          <input type="text" id="name" name="name" class="form-control" placeholder="Your name">
-                      </div>
+          <div class="row">
+              <div class="col-sm-6 offset-sm-3 text-center">
+                  <h1 class="h1-responsive text-center my-4">Contact Me</h1>
+                  <p class="text-center mx-auto mb-5">Have any questions? Don't hesitate to ask</p>              
+                  <div class="info-form">
+                      <form action="" class="form-inlin justify-content-center">
+                          <div class="form-group mb-4">
+                              <input type="text" id="name" name="name" class="form-control" placeholder="Jane Doe">
+                          </div>
+                          <div class="form-group mb-4">
+                              <input type="text" id="email" name="email" class="form-control" placeholder="jane.doe@example.com">
+                          </div>
+                          <div class="form-group mb-4">
+                              <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="I would like to know that..."></textarea>
+                          </div>
+                              <a class="btn btn-primary btn-xl" onclick="document.getElementById('contact-form').submit();">Send</a>
+                      </form>
                   </div>
-                </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="md-form mb-4">
-                      <input type="text" id="email" name="email" class="form-control" placeholder="Your email">
-                  </div>
+                  <br>
               </div>
-              </div>
-              <div class="row">
-                  <div class="col-md-6">
-                      <div class="md-form mb-4">
-                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="Your message"></textarea>
-                      </div>
-                  </div>
-              </div>
-          </form>
-
-          <div class="text-center text-md-left">
-              <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
           </div>
-      </div>
-  </div>
 </section>
-
-
 
 
 
@@ -255,22 +238,22 @@
     <div class="container">
       <ul class="list-inline mb-5">
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#">
-            <i class="icon-social-facebook"></i>
+          <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/nehal-ahmad-76bb39158/">
+            <i class="icon-social-linkedin"></i>
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="#">
+          <a class="social-link rounded-circle text-white mr-3" href="https://twitter.com/NehalAh23870525">
             <i class="icon-social-twitter"></i>
           </a>
         </li>
         <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white" href="#">
+          <a class="social-link rounded-circle text-white" href="https://github.com/nehal119">
             <i class="icon-social-github"></i>
           </a>
         </li>
       </ul>
-      <p class="text-muted small mb-0">Copyright &copy; Your Website 2019</p>
+      <p class="text-muted small mb-0">Copyright &copy; Nehal Ahmad 2019</p>
     </div>
   </footer>
 
