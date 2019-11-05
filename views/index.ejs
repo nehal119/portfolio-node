@@ -149,11 +149,11 @@
       </div>
       <div class="row no-gutters">
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
+          <a class="portfolio-item" href="https://github.com/nehal119/issuetracker">
             <span class="caption">
               <span class="caption-content">
-                <h2>Stationary</h2>
-                <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                <h2>Issue Tracker</h2>
+                <p class="mb-0">A web application to track issues in a project with all the required details and with various other features. (under development)</p>
               </span>
             </span>
             <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
@@ -213,18 +213,18 @@
                   <h1 class="h1-responsive text-center my-4">Contact Me</h1>
                   <p class="text-center mx-auto mb-5">Have any questions? Don't hesitate to ask</p>              
                   <div class="info-form">
-                      <form action="" class="form-inlin justify-content-center">
+                      <form class="form-inlin justify-content-center" id="contact-form">
                           <div class="form-group mb-4">
-                              <input type="text" id="name" name="name" class="form-control" placeholder="Jane Doe">
+                              <input type="text" id="subject" name="subject" class="form-control" placeholder="Your Name">
                           </div>
                           <div class="form-group mb-4">
-                              <input type="text" id="email" name="email" class="form-control" placeholder="jane.doe@example.com">
+                              <input type="email" id="email" name="email" class="form-control" placeholder="your.name@example.com">
                           </div>
                           <div class="form-group mb-4">
-                              <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder="I would like to know that..."></textarea>
+                              <textarea id="text" name="text" rows="2" class="form-control md-textarea" placeholder="I would like to know that..."></textarea>
                           </div>
-                              <a class="btn btn-primary btn-xl" onclick="document.getElementById('contact-form').submit();">Send</a>
-                      </form>
+                               <input type="submit" value="Submit" class="btn btn-primary btn-xl" />
+                      </form> 
                   </div>
                   <br>
               </div>
@@ -271,6 +271,36 @@
 
   <!-- Custom scripts for this template -->
   <script src="/js/stylish-portfolio.min.js"></script>
+
+  <script>
+    $("form").on("submit", e => {
+      e.preventDefault();
+
+      const email = $("#email")
+        .val()
+        .trim();
+      const subject = $("#subject")
+        .val()
+        .trim();
+      const text = $("#text")
+        .val()
+        .trim();
+
+      const data = {
+        email,
+        subject,
+        text
+      };
+
+      $.post("/email", data)
+        .then(() => {
+          window.location.href = "/email/sent";
+        })
+        .catch(() => {
+          window.location.href = "/error";
+        });
+    });
+  </script>
 
 </body>
 
