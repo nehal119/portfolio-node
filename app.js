@@ -5,7 +5,7 @@ app.use(compression());
 
 app.use(express.static(__dirname + "/public"));
 require("dotenv").config();
-const sendMail = require("./mail");
+// const sendMail = require("./mail");
 
 //Data parsing
 app.use(
@@ -16,15 +16,16 @@ app.use(
 app.use(express.json());
 
 app.post("/email", (req, res) => {
-  const { subject, email, text } = req.body;
-  sendMail(email, subject, text, function(err) {
-    if (err) {
-      console.log("ERROR: ", err);
-      return res.status(500).json({ message: err.message || "Internal Error" });
-    }
-    console.log("Email sent!");
-    return res.json({ message: "Email sent!" });
-  });
+  return res.json({ message: "Email currently not available, netmask issue." });
+  // const { subject, email, text } = req.body;
+  // sendMail(email, subject, text, function(err) {
+  //   if (err) {
+  //     console.log("ERROR: ", err);
+  //     return res.status(500).json({ message: err.message || "Internal Error" });
+  //   }
+  //   console.log("Email sent!");
+  //   return res.json({ message: "Email sent!" });
+  // });
 });
 
 //Routes Home
